@@ -3,6 +3,7 @@ package com.tech.helloworldapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -12,7 +13,8 @@ class MainActivity : AppCompatActivity() {
 
         //button click event
         button_click.setOnClickListener {
-            Toast.makeText(this,"welcome here",Toast.LENGTH_LONG).show()
+//            Toast.makeText(this,"welcome here",Toast.LENGTH_LONG).show()
+            Toasty.error(this, "welcome here.", Toast.LENGTH_SHORT, true).show();
         }
     }
 
